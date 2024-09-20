@@ -1,0 +1,9 @@
+# Continuous Deployment Pipeline Configuration
+
+name: Xcode Continuous Deployment Pipeline
+
+xcode_version: 15.4
+
+compiler_command: xcodebuild build-for-testing -scheme SwiftAsyncAssert -destination "platform=macOS"
+test_command: xcodebuild test-without-building -scheme SwiftAsyncAssert -destination "platform=macOS"
+
